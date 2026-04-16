@@ -1,1 +1,184 @@
-v
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rinad Salah | Portfolio</title>
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --beige:#f5efe6;
+      --sand:#e7d8c9;
+      --white:#ffffff;
+      --text:#2b2b2b;
+    }
+
+    body{
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* HERO */
+    #hero{
+      height:100vh;
+      position:relative;
+      background:url("assets/img/banner.jpg") center/cover no-repeat;
+    }
+
+    #hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.4);
+    }
+
+    .hero-content{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      text-align:center;
+      color:white;
+      z-index:2;
+    }
+
+    .hero-content h1{
+      font-size:60px;
+      font-weight:bold;
+    }
+
+    /* SECTIONS COLORS */
+    section{
+      padding:80px 20px;
+    }
+
+    #about{background:var(--beige);}
+    #education{background:var(--white);}
+    #work{background:var(--sand);}
+    #cv{background:var(--beige);}
+
+    .section-title{
+      text-align:center;
+      font-size:32px;
+      margin-bottom:40px;
+      font-weight:bold;
+    }
+
+    .about-container{
+      display:flex;
+      gap:40px;
+      max-width:1000px;
+      margin:auto;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .about-img{
+      width:280px;
+      border-radius:15px;
+    }
+
+    .about-text{
+      flex:1;
+      color:var(--text);
+    }
+
+    /* NAV */
+    .topnav{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:white;
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      padding:15px;
+      z-index:999;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .topnav a{
+      text-decoration:none;
+      color:#333;
+      font-weight:500;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="topnav">
+  <a href="#hero">Home</a>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#work">Artifacts / Work</a>
+  <a href="#cv">CV</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <h1>Rinad Salah</h1>
+    <p>Grade 11 Student | Class of 2026</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-title">About Me</div>
+
+  <div class="about-container">
+    <img src="assets/img/Mypic1.png" class="about-img">
+
+    <div class="about-text">
+      <p>Motivated student passionate about learning and creativity.</p>
+      <p>Interested in technology, writing, and social topics.</p>
+      <p>Developing strong communication and analytical skills.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-title">Education</div>
+
+  <div style="max-width:900px;margin:auto;">
+    <p><b>Westmount High School (Canada)</b> — Grade 11</p>
+    <p><b>Al-Oula School (Saudi Arabia)</b></p>
+    <p><b>CAS International School (China)</b></p>
+    <p><b>MAS School (China)</b></p>
+    <p><b>Yemen Schools (Khawla & Saba)</b></p>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <div class="section-title">Artifacts / Work</div>
+
+  <div style="max-width:900px;margin:auto;">
+    <p>• Infographic: Debt in Canada</p>
+    <p>• Essay: Freedom of Speech vs Fake News</p>
+    <p>• Essay: Technology & Privacy</p>
+    <p>• Literary Analysis: Cat on a Hot Tin Roof</p>
+    <p>• Literary Analysis: The Glass Menagerie</p>
+  </div>
+</section>
+
+<!-- CV -->
+<section id="cv">
+  <div class="section-title">Curriculum Vitae</div>
+
+  <div style="max-width:900px;margin:auto;">
+    <p><b>Email:</b> rinadsalah03@gmail.com</p>
+    <p><b>Skills:</b> Communication, Writing, Research, Teamwork</p>
+    <p><b>Languages:</b> English, Arabic</p>
+  </div>
+</section>
+
+</body>
+</html>
