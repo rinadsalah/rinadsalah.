@@ -1,103 +1,115 @@
-body{
-margin:0;
-font-family:Arial;
-background:#faf7f2;
-color:#3b2f2f;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
 }
 
 /* NAV */
-.nav{
-position:fixed;
-top:0;
-width:100%;
-background:white;
-display:flex;
-justify-content:center;
-gap:20px;
-padding:15px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-z-index:1000;
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background: rgba(0,0,0,0.6);
+  color: white;
 }
 
-.nav a{
-text-decoration:none;
-color:#5c4a3a;
-font-weight:bold;
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
 }
 
 /* HERO */
-.hero{
-height:100vh;
-position:relative;
-overflow:hidden;
+.hero {
+  height: 100vh;
+  position: relative;
 }
 
-.banner-img{
-width:100%;
-height:100%;
-object-fit:cover;
-filter:brightness(60%);
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.hero-text{
-position:absolute;
-top:40%;
-left:50%;
-transform:translate(-50%,-50%);
-text-align:center;
-color:white;
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  text-align: center;
 }
 
-.hero-text h1{
-font-size:60px;
+.hero-text h1 {
+  font-size: 60px;
 }
 
-.profile-img{
-position:absolute;
-bottom:40px;
-right:40px;
-width:120px;
-border-radius:50%;
-border:3px solid white;
+/* ABOUT */
+.about {
+  padding: 80px;
+  background: #f5f0e6;
 }
 
-/* SECTIONS */
-.section{
-padding:80px 20px;
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
-h2{
-text-align:center;
-margin-bottom:40px;
+.profile {
+  width: 250px;
+  border-radius: 20px;
 }
 
-/* GRID */
-.edu-grid, .work-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-max-width:1100px;
-margin:auto;
+/* EDUCATION */
+.education {
+  padding: 80px;
+  background: #fff;
 }
 
-/* CARDS */
-.card, .edu-card, .work-card{
-background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
+.school {
+  display: flex;
+  gap: 20px;
 }
 
-.highlight{
-border:2px solid #c8a98a;
-background:#fffaf3;
+.school img {
+  width: 150px;
 }
 
-/* upload box */
-.upload{
-margin-top:15px;
-padding:15px;
-border:2px dashed #c8a98a;
-text-align:center;
-color:#8a6b4f;
+/* WORK */
+.work {
+  padding: 80px;
+  background: #e6dfd5;
+}
+
+.work a {
+  color: black;
+  text-decoration: none;
+}
+
+/* CV */
+.cv {
+  padding: 80px;
+  background: #fff;
+  text-align: center;
+}
+
+.download-btn {
+  padding: 10px 20px;
+  background: #c2a97e;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
 }
