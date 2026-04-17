@@ -159,3 +159,57 @@ transition:0.4s;
 .home-image img:hover{
 transform:scale(1.05);
 }
+html {
+scroll-behavior: smooth;
+}
+
+/* fade in page */
+body {
+animation: pageLoad 0.8s ease;
+}
+
+@keyframes pageLoad {
+from {
+opacity: 0;
+transform: translateY(10px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* smooth reveal for sections */
+.home-about,
+.hero,
+.edu-card,
+.card {
+opacity: 0;
+transform: translateY(30px);
+animation: fadeUp 1s ease forwards;
+}
+
+/* delay for nicer effect */
+.home-about {
+animation-delay: 0.2s;
+}
+
+.hero {
+animation-delay: 0.1s;
+}
+
+@keyframes fadeUp {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+}
+
+/* hover smooth */
+img, .card, .edu-card {
+transition: all 0.4s ease;
+}
