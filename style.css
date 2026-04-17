@@ -202,3 +202,85 @@ to{transform:scale(1); opacity:1;}
 html{
 scroll-behavior:smooth;
 }
+.education-section{
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f7f1e3, #fffaf3);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.edu-title{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.edu-title h2{
+  font-size: 42px;
+  color: #3b2f2f;
+  font-weight: 800;
+}
+
+.edu-title p{
+  color: #6b5b53;
+}
+
+/* Card base */
+.edu-card{
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  margin: 25px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.4s ease;
+}
+
+.edu-card:hover{
+  transform: translateY(-5px);
+}
+
+/* Highlight current school */
+.edu-card.highlight{
+  display: flex;
+  gap: 20px;
+  border-left: 6px solid #a67c52;
+  background: #fff7ec;
+}
+
+/* Image */
+.edu-img img{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 3px solid #a67c52;
+}
+
+/* Text */
+.edu-content h3,
+.edu-card h3{
+  font-size: 20px;
+  font-weight: 800;
+  color: #2f2a26;
+}
+
+.edu-card h4{
+  color: #8a6f5a;
+  margin-bottom: 10px;
+}
+
+/* Timeline spacing */
+.timeline{
+  margin-top: 40px;
+  padding-left: 20px;
+  border-left: 3px solid #d8c3a5;
+}
+
+/* Animation */
+.education-section{
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
