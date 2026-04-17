@@ -1,8 +1,20 @@
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Poppins, sans-serif;
-scroll-behavior:smooth;
+}
+
+body{
 background:#f8f3ea;
+overflow-x:hidden;
+animation:fadePage 0.8s ease;
+}
+
+/* PAGE FADE */
+@keyframes fadePage{
+from{opacity:0; transform:translateY(10px);}
+to{opacity:1; transform:translateY(0);}
 }
 
 /* NAV */
@@ -12,31 +24,34 @@ top:0;
 width:100%;
 display:flex;
 justify-content:center;
-gap:30px;
-padding:15px;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+gap:35px;
+padding:18px;
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(10px);
 z-index:1000;
+transition:0.3s;
 }
 
 nav a{
 text-decoration:none;
 color:#3b2f2f;
 font-weight:600;
+position:relative;
 }
 
-/* HEADINGS */
-h1{
-font-size:60px;
-font-weight:800;
-color:#2f2a26;
-text-align:center;
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:2px;
+background:#3b2f2f;
+transition:0.3s;
 }
 
-h2{
-font-size:36px;
-font-weight:800;
-margin-bottom:20px;
+nav a:hover::after{
+width:100%;
 }
 
 /* HERO */
@@ -44,35 +59,56 @@ margin-bottom:20px;
 height:100vh;
 background:url("banner.jpg") center/cover no-repeat;
 display:flex;
-align-items:center;
-justify-content:center;
 flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
 color:white;
-text-shadow:0 5px 20px rgba(0,0,0,0.6);
+text-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+.hero h1{
+font-size:70px;
+font-weight:900;
+animation:pop 1s ease;
 }
 
 .hero p{
 font-size:20px;
-text-align:center;
+margin-top:10px;
+opacity:0;
+animation:fadeUp 1.2s ease forwards;
+animation-delay:0.3s;
 }
 
 /* ABOUT */
 .about{
-padding:80px;
+padding:100px;
 display:flex;
 gap:50px;
 align-items:center;
-background:#fff;
+background:white;
 }
 
 .about img{
-width:280px;
+width:300px;
 border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+transition:0.4s;
+}
+
+.about img:hover{
+transform:scale(1.05);
+}
+
+.about h2{
+font-size:40px;
+margin-bottom:20px;
 }
 
 .about p{
-font-size:18px;
 line-height:1.8;
+font-size:17px;
 }
 
 /* SECTIONS */
@@ -84,62 +120,85 @@ padding:120px 80px;
 .sand{background:#e7d8c9;}
 .white{background:#ffffff;}
 
-/* EDUCATION */
+/* EDUCATION CARDS */
 .school{
 background:white;
-padding:20px;
+padding:25px;
 margin:20px 0;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.4s;
 }
 
-.school h3{
-font-weight:800;
+.school:hover{
+transform:translateY(-5px);
 }
 
-/* WORK CARDS */
+/* WORK */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 
 .card{
 background:white;
 padding:20px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.4s;
 }
 
-.card h3{
-font-weight:800;
+.card:hover{
+transform:translateY(-8px);
 }
 
 .card a{
 display:inline-block;
-margin-top:10px;
+margin-top:12px;
 padding:10px 15px;
 background:#3b2f2f;
 color:white;
-border-radius:8px;
+border-radius:10px;
 text-decoration:none;
+transition:0.3s;
 }
 
-/* CV */
-.cv-box{
-background:white;
-padding:40px;
-border-radius:20px;
-line-height:1.8;
+.card a:hover{
+background:#5a4742;
+transform:scale(1.05);
 }
 
+/* CV BUTTON */
 .btn{
 display:inline-block;
-margin-top:20px;
-padding:12px 20px;
+margin-top:25px;
+padding:12px 22px;
 background:#3b2f2f;
 color:white;
+border-radius:12px;
 text-decoration:none;
-border-radius:10px;
 font-weight:700;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+background:#5a4742;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes pop{
+from{transform:scale(0.8); opacity:0;}
+to{transform:scale(1); opacity:1;}
+}
+
+/* SCROLL SMOOTH EFFECT */
+html{
+scroll-behavior:smooth;
 }
