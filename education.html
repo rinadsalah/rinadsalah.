@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Education</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -20,22 +19,15 @@
 
 <h1 class="page-title">Education Timeline</h1>
 
-<!-- CURRENT SCHOOL (FEATURED) -->
-<div class="edu-card highlight reveal">
+<!-- CURRENT SCHOOL -->
+<div class="edu-card highlight">
+<img src="WHS.jpg" class="edu-img">
 
-<div class="edu-img">
-<img src="WHS.jpg" alt="WHS">
-</div>
-
-<div class="edu-text">
+<div>
 <h2>Westmount High School — Montreal, Canada</h2>
 <p>Expected Graduation: 2026</p>
-<p>
-Relevant Courses: Chemistry, Physics, Mathematics, English, Drama, Finance, Contemporary Studies, CCQ, Physical Education
-</p>
-<p>
-Strong academic performance, particularly in English. Developed analytical thinking, communication, and teamwork skills.
-</p>
+<p>Relevant Courses: Chemistry, Physics, Mathematics, English, Drama, Finance, Contemporary Studies, CCQ, Physical Education</p>
+<p>Strong academic performance, particularly in English.</p>
 </div>
 
 </div>
@@ -43,39 +35,52 @@ Strong academic performance, particularly in English. Developed analytical think
 <!-- TIMELINE -->
 <div class="timeline">
 
-<div class="edu-card reveal">
+<div class="edu-card">
 <h2>Al-Oula School — Saudi Arabia</h2>
 <p>2024–2025</p>
-<p>Organized school events and morning announcements. Developed public speaking and communication skills.</p>
+<p>Organized school events and morning announcements.</p>
 </div>
 
-<div class="edu-card reveal">
+<div class="edu-card">
 <h2>CAS International School — China</h2>
 <p>2020–2023</p>
-<p>Winner of “Best Speaker” competition. Built a personal HTML website. Participated in multilingual presentations.</p>
+<p>Best Speaker Award. HTML website. Presentations.</p>
 </div>
 
-<div class="edu-card reveal">
+<div class="edu-card">
 <h2>MAS School — China</h2>
 <p>2017–2020</p>
-<p>Recognized for teamwork and participation in academic and creative projects.</p>
+<p>Teamwork and academic projects.</p>
 </div>
 
-<div class="edu-card reveal">
+<div class="edu-card">
 <h2>Saba School — Yemen</h2>
 <p>2016–2017</p>
-<p>Participated in classroom activities, presentations, sports, and group work. Developed early teamwork skills.</p>
+<p>Group work, presentations, sports.</p>
 </div>
 
-<div class="edu-card reveal">
+<div class="edu-card">
 <h2>Khawla School — Yemen</h2>
 <p>2014–2016</p>
-<p>Early literacy, drawing, storytelling, creativity, and curiosity in learning.</p>
+<p>Early learning, creativity, drawing.</p>
 </div>
 
 </div>
 
 </section>
+
+<script>
+const cards = document.querySelectorAll('.edu-card');
+
+window.addEventListener('scroll', () => {
+cards.forEach(card => {
+const top = card.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+card.classList.add('show');
+}
+});
+});
+</script>
 
 </body>
 </html>
