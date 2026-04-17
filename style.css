@@ -213,3 +213,83 @@ transform: translateY(30px);
 img, .card, .edu-card {
 transition: all 0.4s ease;
 }
+
+/* PAGE TITLE */
+.page-title{
+text-align:center;
+font-size:42px;
+margin:120px 0 40px;
+color:#3b2f2f;
+}
+
+/* EDUCATION SECTION */
+.edu-section{
+padding:80px 10%;
+background:#f8f3ea;
+}
+
+/* FEATURED SCHOOL */
+.edu-card.highlight{
+display:flex;
+gap:25px;
+align-items:center;
+background:#fff7ec;
+border-left:6px solid #a67c52;
+padding:25px;
+border-radius:18px;
+margin-bottom:50px;
+}
+
+/* IMAGE */
+.edu-img img{
+width:200px;
+height:200px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* TEXT */
+.edu-text h2{
+font-size:22px;
+color:#2f2a26;
+margin-bottom:10px;
+}
+
+.edu-text p{
+line-height:1.6;
+color:#4a3f3a;
+margin-bottom:10px;
+}
+
+/* TIMELINE */
+.timeline{
+border-left:3px solid #d8c3a5;
+padding-left:25px;
+margin-top:40px;
+}
+
+.edu-card{
+background:white;
+padding:20px;
+margin:25px 0;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.4s ease;
+}
+
+.edu-card:hover{
+transform:translateY(-5px);
+}
+
+/* 🔥 SCROLL ANIMATION */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
