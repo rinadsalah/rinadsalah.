@@ -284,3 +284,65 @@ scroll-behavior:smooth;
   from {opacity: 0; transform: translateY(30px);}
   to {opacity: 1; transform: translateY(0);}
 }
+
+/* ===== EDUCATION MODERN SECTION (ADD ONLY) ===== */
+
+.education-section{
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f7f1e3, #fffaf3);
+  font-family: "Poppins", sans-serif;
+}
+
+.edu-title{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.edu-title h2{
+  font-size: 42px;
+  color: #3b2f2f;
+  font-weight: 800;
+}
+
+.edu-title p{
+  color: #6b5b53;
+}
+
+.edu-card{
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  margin: 25px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.4s ease;
+}
+
+.edu-card:hover{
+  transform: translateY(-5px);
+}
+
+.edu-card.highlight{
+  display: flex;
+  gap: 20px;
+  border-left: 6px solid #a67c52;
+  background: #fff7ec;
+}
+
+.edu-img img{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 3px solid #a67c52;
+}
+
+.edu-card h3{
+  font-size: 20px;
+  font-weight: 800;
+  color: #2f2a26;
+}
+
+.edu-card h4{
+  color: #8a6f5a;
+  margin-bottom: 10px;
+}
