@@ -63,18 +63,43 @@ font-size:20px;
 }
 
 .about img{
-width:300px;
-border-radius:20px;
+  width:300px;
+  max-width:100%;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  transition:0.4s ease;
+}
+
+.about img:hover{
+  transform:scale(1.05);
 }
 
 .about h2{
-font-size:40px;
-margin-bottom:20px;
+  font-size:40px;
+  margin-bottom:20px;
+  color:#3b2f2f;
 }
 
 .about p{
-line-height:1.8;
-font-size:17px;
+  line-height:1.8;
+  font-size:17px;
+  color:#444;
+  max-width:500px;
+}
+@media (max-width: 768px){
+
+  .about img{
+    width:220px;
+  }
+
+  .about h2{
+    font-size:28px;
+  }
+
+  .about p{
+    font-size:15px;
+    max-width:100%;
+  }
 }
 
 /* SECTIONS */
