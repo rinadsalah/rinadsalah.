@@ -495,3 +495,79 @@ transform:scale(1.1);
   opacity:1;
   transform: translateY(0);
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .about{
+    flex-direction:column;
+    text-align:center;
+    padding:60px 20px;
+  }
+
+  .about img{
+    width:250px;
+  }
+
+  .cv-container{
+    padding:25px;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+
+  nav{
+    flex-wrap:wrap;
+    gap:15px;
+    padding:10px;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .about{
+    flex-direction:column;
+    padding:40px 15px;
+  }
+
+  .about img{
+    width:200px;
+  }
+
+  .school, .card, .edu-card{
+    padding:15px;
+  }
+
+  .cv-container{
+    padding:20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  nav a{
+    font-size:14px;
+  }
+
+  .about p{
+    font-size:14px;
+    line-height:1.6;
+  }
+}
