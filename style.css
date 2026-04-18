@@ -484,3 +484,14 @@ transition:0.3s;
 background:#5a4742;
 transform:scale(1.1);
 }
+/* SCROLL REVEAL */
+.reveal{
+  opacity:0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform: translateY(0);
+}
