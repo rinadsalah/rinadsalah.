@@ -598,3 +598,14 @@ transform:scale(1.1);
     line-height:1.6;
   }
 }
+.hero{
+  height:100vh;
+  background:url("banner.jpg") center/cover no-repeat fixed;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  text-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
